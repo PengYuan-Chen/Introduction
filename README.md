@@ -1,4 +1,4 @@
-# 自我介紹(html、css、javaScript)
+# RWD自我介紹網站
 
 ![html1](https://github.com/PengYuan-Chen/pengYuanIntroduce/assets/56713107/681a7fec-6f10-4d3c-a41e-423472723657)
 
