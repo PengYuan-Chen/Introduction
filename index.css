@@ -1,0 +1,230 @@
+/*#region 預設樣式*/
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+li{
+    list-style:none
+}
+a{ 
+    text-decoration: none; 
+}
+img{
+    vertical-align:top;
+    border:none
+ }
+@font-face{
+    font-family: '字體1';
+    src:url('./fonts/ShinGoPro-Medium.otf') format('opentype');
+
+}
+h2{
+    font-size: 40px;
+}
+/*#endregion*/
+/*#region 首頁*/
+#main{
+    height: 100vh;
+    background-image: url(./images/pic3.png);  
+    background-size: cover;  
+}
+.container{
+    width: 1620px;
+    margin: 0 auto;
+}
+.header{
+    height: 100px;
+    padding:0 150px;
+    overflow: hidden;
+}
+.small-nav{
+    width: 0;
+    height: 0;
+}
+.header .nav{
+    float: right;
+    line-height:100px; 
+}
+.header span a{    
+    font-family:"字體1";
+    font-size: 25px;
+    padding:0 40px;
+    color: rgb(255, 255, 255); 
+}
+.header span a:hover{
+    color: blue;
+    cursor: pointer;
+}
+.header span a:last-child{    
+    padding-right: 0;
+}
+.header img{
+    margin-top: 10px;
+    height: 80px;
+}
+#main .container{
+    color: rgb(255, 255, 255);
+    height:calc(100vh - 100px);
+
+}
+#main .container .title-section{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.title{
+    font-size: 130px;
+    font-weight: bold;
+}
+.sub-title{
+    font-size: 20px;
+}
+.sticky{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 10;
+    box-shadow:0 0 10px gray;
+}
+.sticky .nav{
+    position: fixed;
+    top:0;
+    right: 150px;
+ 
+}
+.sticky .nav a{
+    color: rgb(0, 0, 0);
+}
+/*#endregion*/
+/*#region 關於我*/
+#about .container{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-family:"字體1";
+}
+#about .container .about-content{
+    height: 500px;
+    width: 800px;
+    font-size: 22px;   
+}
+#about .container .about-content span{
+    font-size: 55px;
+    color: blue
+}
+#about .container img{
+    height: 500px;
+}
+/*#endregion*/
+/*#region 工作*/
+#work .container{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-family:"字體1";
+}
+#work .container .work-content{
+    height: 500px;
+    font-size: 22px;
+    text-align: center;  
+    width: 100%;
+}
+#work .container .work-content span{
+    font-size: 55px;
+    color: blue
+}
+#work .container .work-content .work-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.work-content .work-list div{
+     width: 600px;
+     text-align: left;
+}
+/*#endregion*/
+/*#region 專長*/
+#hobby{
+    background-image: url(./images/pic4.png);
+    background-size: cover;
+    text-align: center;
+    height: 1000px;  
+}
+#hobby .topic{
+    font-family:"字體1";
+    color: white;
+    padding-top: 100px;
+    margin-bottom: -100px;
+}
+.topic span{
+    font-size: 55px;
+    color: blue
+}
+#hobby .container .hobby-all{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#hobby .hobby-list{
+    background-color:white;
+    width: 450px;
+    height: 500px;
+    font-family: '字體1';
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: left;
+}
+#hobby .hobby-list h2{
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    
+}
+#hobby .hobby-list span{    
+    font-size: 22px;
+    display: block;
+    padding-top: 20px;
+    color: black;
+}
+/*#endregion*/
+/*#region 照片*/
+#photo .container{
+    height: 800px;
+}
+#photo .photo-title{
+    font-family:"字體1";
+    color: rgb(0, 0, 0);
+    padding-top: 50px;
+    text-align:center;
+}
+#photo h2 span{
+    font-size: 55px;
+    color: blue
+}
+.photo-list{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap; 
+}
+.photo-list img{
+    height: 200px;
+    border: 10px solid rgb(255, 255, 255);
+}
+.photo-list div{
+    margin:10px 50px;
+    box-shadow: 0 0 100px rgb(198, 198, 198);
+}
+.photo-list div h2{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+/*#endregion*/
