@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./medium.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 首頁 -->
+    <div id="main">
+        <div class="header">
+            <div class="small-nav" onclick="showNav()"></div>
+            <img src="./images/logo.png" alt="">
+            <div class="nav" >
+                <span onclick="deleteNav()"><a href="#main">首頁</a></span>
+                <span onclick="deleteNav()"><a href="#about">關於我</a></span>
+                <span onclick="deleteNav()"><a href="#work">工作經驗</a></span>
+                <span onclick="deleteNav()"><a href="#hobby">程式專長</a></span>
+                <span onclick="deleteNav()"><a href="#photo">照片牆</a></span>                
+            </div>
+        </div>
+        <div class="container">
+            <div class="title-section">
+                <span class="title">芃遠自我介紹</span><br>
+                <span class="sub-title">你好我是陳芃遠，出生於2000年2月11</span>    
+            </div>        
+        </div>        
+    </div>
+    <!-- 關於我 -->
+    <div id="about">
+        <div class="container">
+            <div class="about-content"><h2><span>關</span>於我</h2>你好我是陳芃遠，出生於2000年2月11，出生於桃園，高中就讀新興高中普通科，大學畢業於國立暨南大學資管系，性格樂觀開朗，喜歡與人交流。<br><br>興趣是健身跟打球，也喜歡出國旅遊，體驗各國的風土民情。今年去了日本大阪自由行，吃到很多美食跟看到很多美麗的風景都讓我印象深刻，會想再一次造訪這裡。
+            <br><br>平時會自己研究程式，上網自學一些前端技術，包括html、css 、js等，每當學完一門技術會自己做出一個作品來驗證所學，包含這個作品也是，透過實際操作才能發現自己有哪邊有不足。</div>
+            <div class="about-image"><img src="./images/IMG_1459 (2).JPEG" alt=""></div>
+        </div>
+    </div>
+    <!-- 工作經驗 -->
+    <div id="work">
+        <div class="container">
+            <div class="work-content">
+                <h2>工<span>作</span>經歷</h2>
+                <div class="work-list">
+                    <div>補習班助教(2018 / 3 - 2018 / 7)<br>
+                    協助老師處理班級事務，擦黑板，發考卷，處理學生提問，協助授課老師使課程能順利進行。
+                    當時考完學測就直接在補習班打工，等待放榜的同時賺一點生活費。
+                    </div>
+                    <div>超商工讀生(2022 / 6 - 2023 / 4)<br>
+                    畢業後到超商上班，沒有這方面工作經驗的我感到很緊張，因為大家都知道超商是很累的工作，薪水也不多，但我還是想嘗試看看。
+                    實際工作起來真的蠻辛苦的，必須站著8個多小時，也要一邊補貨一邊結帳，也要處理很多雜事，並且每一樣都要處理好才能下班，
+                    非常考驗我們的做事能力。同時也在這段時間學到很多東西。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 專長 -->
+    <div id="hobby">   
+        <div class="container">
+            <h2 class="topic">程式<span>專</span>長</h2>
+            <div class="hobby-all">
+                <div class="hobby-list"><h2>Web Design</h2><hr><span>- HTML5</span><span>- CSS3</span><span>- Bootstrap5</span><span>- RWD web design</span></div>
+                <div class="hobby-list"><h2>Front End</h2><hr><span>- JavaScript ES6</span><span>- Vue2 Vue3</span><span>- Vuex VueCli</span><span>- Ajax API connect</span></div>
+                <div class="hobby-list"><h2>Version Control</h2><hr><span>- Git version control</span><span>- Git Command Line</span><span>- SourceTree</span><span>- Github</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- 照片牆 -->
+    <div id="photo">
+        <div class="container">
+            <h2 class="photo-title">照片<span>牆</span></h2>
+            <div class="photo-list">
+                <div><img src="./images/IMG_3151.JPEG" alt=""><h2>騎車上合歡山</h2></div>
+                <div><img src="./images/IMG_3154.JPG" alt=""><h2>合歡山風景</h2></div>
+                <div><img src="./images/IMG_3354.JPG" alt=""><h2>集集火車站</h2></div>
+                <div><img src="./images/IMG_1378.JPG" alt=""><h2>109旅5營火力連</h2></div>       
+                <div><img src="./images/IMG_3354.JPG" alt=""><h2>集集火車站</h2></div>
+                <div><img src="./images/IMG_1378.JPG" alt=""><h2>109旅5營火力連</h2></div> 
+                <div><img src="./images/IMG_3154.JPG" alt=""><h2>合歡山風景</h2></div> 
+                <div><img src="./images/IMG_3151.JPEG" alt=""><h2>騎車上合歡山</h2></div>          
+            </div>
+        </div>
+    </div>
+    <script> 
+    //滾動時要把header fixed
+    window.addEventListener('scroll',(event) => {
+        const header=document.getElementsByClassName('header')[0];
+        header.classList.toggle('sticky',this.scrollY>0)
+        if(this.innerWidth<1200){
+            small_nav.classList.toggle('nav-btn',true)  
+            box.classList.toggle('nav',false)
+        }
+    });
+    const box=document.getElementsByClassName('nav')[0];    
+    const small_nav=document.getElementsByClassName('small-nav')[0];   
+    //畫面小於1200就變選單
+    window.addEventListener('resize',function(){
+        if(this.innerWidth>1200){
+            box.classList.toggle('newNav',false)
+            box.classList.toggle('nav',true)
+            small_nav.classList.toggle('nav-btn',false)  
+        }
+        else if(this.innerWidth<1200){
+            small_nav.classList.toggle('nav-btn',true)  
+            box.classList.toggle('nav',false)
+        }
+    })
+    //點擊選單事件
+    function showNav(){       
+        if(box.className==''){
+            box.classList.toggle('nav',false)
+            box.classList.toggle('newNav',true)
+        }
+        else if(box.className=='newNav'){
+            box.classList.toggle('newNav',false)
+        }
+    } 
+    //移動後選單刪除
+    function deleteNav(){
+        box.classList.toggle('newNav',false)
+    }
+    
+    </script>
+</body>
+</html>
